@@ -22,7 +22,7 @@ export default function Home() {
     } else {
       // Create a welcome note
       const welcomeNote: Note = {
-        id: Date.now().toString(),
+        id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
         title: 'Welcome to AlligatorBrain',
         content: 'Start typing to create your first note...',
         createdAt: new Date().toISOString(),
@@ -43,7 +43,7 @@ export default function Home() {
 
   const createNewNote = () => {
     const newNote: Note = {
-      id: Date.now().toString(),
+      id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       title: 'Untitled',
       content: '',
       createdAt: new Date().toISOString(),

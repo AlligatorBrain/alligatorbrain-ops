@@ -56,7 +56,7 @@ npm start
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **UI**: React 19
 - **Styling**: Tailwind CSS
 - **Language**: TypeScript
