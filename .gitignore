@@ -1,1 +1,19 @@
 .DS_Store
+
+# macOS
+.DS_Store
+
+# env/secrets
+.env
+.env.*
+
+# node / build
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+
+# logs
+*.log
