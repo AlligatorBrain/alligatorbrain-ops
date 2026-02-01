@@ -16,6 +16,11 @@ This repository includes a setup script to help you create the GitHub repository
 Run the setup script from your local repository:
 
 ```bash
+# Option 1: Run with bash
+bash setup-repo.sh
+
+# Option 2: Make executable and run
+chmod +x setup-repo.sh
 ./setup-repo.sh
 ```
 

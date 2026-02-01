@@ -53,20 +53,15 @@ else
     echo "⚠️  Repository ${REPO_OWNER}/${REPO_NAME} does not exist"
     echo "Creating repository..."
     
-    # Create the repository
-    gh repo create "${REPO_OWNER}/${REPO_NAME}" --public --description "Daily app" --confirm
+    # Create the repository (set -e will exit on failure)
+    gh repo create "${REPO_OWNER}/${REPO_NAME}" --public --description "Daily app"
     
-    if [ $? -eq 0 ]; then
-        echo "✅ Repository created successfully"
-        
-        # Add remote if not already added
-        if ! git remote get-url origin &> /dev/null; then
-            git remote add origin "${REMOTE_URL}.git"
-            echo "✅ Remote 'origin' added"
-        fi
-    else
-        echo "❌ Failed to create repository"
-        exit 1
+    echo "✅ Repository created successfully"
+    
+    # Add remote if not already added
+    if ! git remote get-url origin &> /dev/null; then
+        git remote add origin "${REMOTE_URL}.git"
+        echo "✅ Remote 'origin' added"
     fi
 fi
 
